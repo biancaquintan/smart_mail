@@ -9,3 +9,4 @@ PyPDF2
 openai
 python-dotenv
 nltk
+pdfminer.six

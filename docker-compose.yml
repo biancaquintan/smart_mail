@@ -7,8 +7,22 @@ services:
       - ENV=dev
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - MODEL_PATH=/models/model.joblib
+      - DATA_PATH=/app/data/sample_email.csv
       - ALLOW_ORIGINS=*
+    working_dir: /app
     volumes:
       - ./models:/models
+      - ./backend/data:/app/data:ro
     ports:
       - '8000:8000'
+
+  trainer:
+    build: ./backend
+    working_dir: /app
+    command: ['python', 'scripts/train.py']
+    environment:
+      - MODEL_PATH=/models/model.joblib
+      - DATA_PATH=/app/data/sample_email.csv
+    volumes:
+      - ./models:/models
+      - ./backend/data:/app/data:ro

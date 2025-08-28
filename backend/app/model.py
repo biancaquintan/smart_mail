@@ -37,7 +37,13 @@ class EmailClassifier:
     proba = None
     if hasattr(self.pipeline.named_steps["clf"], "predict_proba"):
         proba = self.pipeline.predict_proba(texts)
-    preds = self.pipeline.predict(texts)
+
+    preds = self.pipeline.predict(texts)  # 0 ou 1
     labels = [LABELS[int(p)] for p in preds]
-    probs = [float(max(p)) if proba is not None else 1.0 for p in (proba or [[1]] * len(preds))]
+
+    if proba is not None:
+        probs = [float(max(p_row)) for p_row in proba]
+    else:
+        probs = [1.0] * len(preds)
+
     return labels, probs
