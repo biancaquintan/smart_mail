@@ -1,0 +1,8 @@
+node_modules/
+venv/
+*.pyc
+__pycache__/
+.env
+models/
+.vscode/*
+!.vscode/settings.json
