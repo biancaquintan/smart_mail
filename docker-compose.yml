@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    environment:
+      - ENV=dev
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MODEL_PATH=/models/model.joblib
+      - ALLOW_ORIGINS=*
+    volumes:
+      - ./models:/models
+    ports:
+      - '8000:8000'
