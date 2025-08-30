@@ -28,8 +28,8 @@ services:
   frontend:
     build: ./frontend
     volumes:
-      - ./frontend:/ui   # sincroniza código com o container
-      - /ui/node_modules # preserva node_modules do container (evita conflito com host)
+      - ./frontend:/ui
+      - /ui/node_modules
     ports:
       - '5173:5173'
     depends_on:
