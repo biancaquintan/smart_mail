@@ -10,3 +10,4 @@ openai
 python-dotenv
 nltk
 pdfminer.six
+wordfreq
