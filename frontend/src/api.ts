@@ -16,3 +16,19 @@ export async function classify({ text, file }: { text?: string; file?: File }) {
     reply: string
   }>
 }
+
+
+export async function regenerateReply(category: string, text: string) {
+  const resp = await fetch('/api/reply', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ category, text }),
+  })
+
+  if (!resp.ok) {
+    const err = await resp.json().catch(() => ({ detail: 'Erro desconhecido' }))
+    throw new Error(err.detail || 'Falha ao regenerar resposta')
+  }
+
+  return resp.json() as Promise<{ reply: string }>
+}

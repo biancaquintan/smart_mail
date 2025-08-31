@@ -1,6 +1,6 @@
 // App.tsx
 import React, { useState } from 'react'
-import { classify } from './api'
+import { classify, regenerateReply } from './api'
 import { Upload, Send, AlertCircle, Copy, Sparkles } from 'lucide-react'
 
 type Result = {
@@ -37,6 +37,19 @@ export default function App() {
 
   const copyReply = () => {
     if (result?.reply) navigator.clipboard.writeText(result.reply)
+  }
+
+  const handleRegenerate = async () => {
+    if (!result) return
+    setLoading(true)
+    try {
+      const data = await regenerateReply(result.category, text)
+      setResult({ ...result, reply: data.reply })
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -120,7 +133,11 @@ export default function App() {
                 >
                   <Copy className="w-4 h-4" /> Copiar
                 </button>
-                <button className="flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-slate-100 dark:hover:bg-slate-800 transition text-sm">
+                <button
+                  onClick={handleRegenerate}
+                  disabled={loading}
+                  className="flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-slate-100 dark:hover:bg-slate-800 transition text-sm"
+                >
                   <Sparkles className="w-4 h-4" /> Regenerar
                 </button>
               </div>

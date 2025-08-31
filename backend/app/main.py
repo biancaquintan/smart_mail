@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File, Form
+from fastapi import FastAPI, UploadFile, File, Form, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
@@ -107,3 +107,12 @@ async def classify(
   reply = await reply_generator.generate(category, content)
 
   return ClassifyResponse(category=category, probability=probability, reply=reply)
+
+
+@app.post("/api/reply")
+async def regenerate_reply(
+  category: str = Body(...),
+  text: str = Body(...)
+):
+  reply = await reply_generator.generate(category, text)
+  return {"reply": reply}
