@@ -1,9 +1,88 @@
 text,label
-"Feliz Natal a todos da equipe!",Improdutivo
-"Obrigado pelo suporte prestado ontem.",Improdutivo
-"Poderia me informar o status da solicitação #12345?",Produtivo
-"Segue anexo o comprovante solicitado.",Produtivo
-"Bom dia, parabéns pelo excelente trabalho!",Improdutivo
-"Tive problemas ao acessar o sistema hoje, podem verificar?",Produtivo
-"Gostaria de atualizar meu endereço cadastral.",Produtivo
-"Agradeço o retorno!",Improdutivo
+"Feliz Natal a todos!", Improdutivo
+"Feliz Páscoa!", Improdutivo
+"Obrigado pelo suporte prestado ontem.", Improdutivo
+"Poderia me informar o status da solicitação #12345?", Produtivo
+"Segue anexo o comprovante solicitado.", Produtivo
+"Bom dia, parabéns pelo excelente trabalho!", Improdutivo
+"Tive problemas ao acessar o sistema hoje, podem verificar?", Produtivo
+"Gostaria de atualizar meu endereço cadastral.", Produtivo
+"Agradeço o retorno!", Improdutivo
+"Estou com dificuldades para acessar a minha conta. Pode me ajudar?", Produtivo
+"Qual é o prazo para que eu receba o reembolso?", Produtivo
+"Gostaria de saber sobre o status da minha reclamação.", Produtivo
+"Obrigado pela atualização, vou repassar as informações.", Improdutivo
+"É possível me enviar mais detalhes sobre a solicitação anterior?", Produtivo
+"Tem como me enviar um comprovante de pagamento?", Produtivo
+"Bom final de semana a todos, muito obrigado!", Improdutivo
+"Quais são os próximos passos para resolver meu problema?", Produtivo
+"Preciso de ajuda.", Produtivo
+"Muito obrigado!", Improdutivo
+"Erro no sistema", Produtivo
+"Não consigo fazer login", Produtivo
+"Qual é o status do meu pedido de reembolso?", Produtivo
+"Gostaria de saber se já foi processado o pagamento da minha última fatura", Produtivo
+"Fiz o pagamento da minha fatura ontem, mas não vejo refletido no sistema, pode verificar?", Produtivo
+"Estou aguardando uma resposta sobre minha solicitação anterior, pode me informar?", Produtivo
+"Posso obter uma segunda via do boleto?", Produtivo
+"Tem como me enviar o comprovante de pagamento do mês passado?", Produtivo
+"Como posso corrigir um erro no pagamento?", Produtivo
+"Bom dia, alguém pode me ajudar com meu acesso ao sistema?", Produtivo
+"Estou enfrentando um problema no login, não consigo acessar minha conta", Produtivo
+"Gostaria de confirmar o status do meu financiamento", Produtivo
+"Por favor, envie o comprovante de pagamento da última cobrança", Produtivo
+"Estou tendo dificuldades para visualizar o extrato no site", Produtivo
+"Preciso de um suporte mais detalhado para resolver um problema com minha conta", Produtivo
+"Qual o status da minha solicitação de alteração de dados bancários?", Produtivo
+"Gostaria de saber se o meu pagamento foi aprovado", Produtivo
+"Fiz um depósito, mas não apareceu no meu extrato, pode me explicar?", Produtivo
+"Tem como me ajudar a reativar minha conta?", Produtivo
+"Bom dia, como posso corrigir um erro no cadastro?", Produtivo
+"Feliz aniversário, espero que tenha um ótimo dia!", Improdutivo
+"Gostaria de informar que tive problemas com meu cartão de crédito", Produtivo
+"Preciso de um comprovante de pagamento para o meu imposto de renda", Produtivo
+"Você poderia me enviar a segunda via do boleto?", Produtivo
+"Olá, gostaria de saber o status do meu pedido de cartão de crédito", Produtivo
+"Qual é o prazo para que meu pedido seja aprovado?", Produtivo
+"Oi, espero que tenha um bom final de semana!", Improdutivo
+"Preciso do status da minha solicitação de empréstimo", Produtivo
+"Por favor, me envie o comprovante de pagamento do meu financiamento", Produtivo
+"Como posso alterar o limite do meu cartão?", Produtivo
+"Gostaria de saber quando será processado o pagamento da minha fatura", Produtivo
+"Eu recebi uma cobrança errada, preciso corrigir isso", Produtivo
+"Me avise quando o pagamento for aprovado", Produtivo
+"Bom dia, espero que todos estejam bem!", Improdutivo
+"Por favor, me mande a confirmação do pagamento da última fatura", Produtivo
+"Olá, vocês podem me ajudar com um erro no sistema?", Produtivo
+"Como posso alterar meu endereço cadastral?", Produtivo
+"Me ajudem, estou com dificuldades para acessar meu extrato bancário", Produtivo
+"Feliz ano novo!", Improdutivo
+"Boa tarde, gostaria de saber como posso alterar meus dados cadastrais", Produtivo
+"Preciso confirmar a data do pagamento do meu cartão", Produtivo
+"Obrigado!", Improdutivo
+"Valeu!", Improdutivo
+"Bom dia", Improdutivo
+"Boa tarde", Improdutivo
+"Bom dia, espero que esteja bem!", Improdutivo
+"Obrigado pela ajuda, vou verificar e volto em breve!", Improdutivo
+"Agradeço pela atenção, qualquer coisa, volto a entrar em contato", Improdutivo
+"Obrigado pelo suporte prestado ontem!", Improdutivo
+"Estou aguardando o retorno sobre minha solicitação", Produtivo
+"Tenham um excelente feriado!", Improdutivo
+"Obrigado mais uma vez!", Improdutivo
+"Ok, entendido.", Improdutivo
+"Mensagem recebida, obrigado.", Improdutivo
+"Recebido.", Improdutivo
+"Preciso de ajuda com esse pedido #823323626396", Produtivo
+"Qual é o status da minha solicitação #998877", Produtivo
+"Preciso da 2ª via da fatura do cartão final 1677", Produtivo
+"Confirmar alteração de endereço para cpf 167.888.988-21", Produtivo
+"Preciso da 2ª via da fatura do cliente ID436677", Produtivo
+"Quero alterar o endereço de cadastro.", Produtivo
+"Me ajude com esse caso #9872326362328378", Produtivo
+"Me ajude com a solicitação 0022326362328378", Produtivo
+"Pedido #2389327873", Produtivo
+"Quero cancelar o seguro #SEG00008973238372", Produtivo
+"Qual é a data de fechamento do meu cartão de crédito?", Produtivo
+"Preciso de ajuda com o pedido PD18979832837", Produtivo
+"Me ajude com o pedido #123456BD2000", Produtivo
