@@ -1,7 +1,6 @@
-// App.tsx
 import React, { useState } from 'react'
 import { classify, regenerateReply } from './api'
-import { Upload, Send, AlertCircle, Copy, Sparkles } from 'lucide-react'
+import { Upload, Send, AlertCircle, Copy, Sparkles, Check } from 'lucide-react'
 
 type Result = {
   category: string
@@ -15,6 +14,7 @@ export default function App() {
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<Result | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [copied, setCopied] = useState(false)
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -36,7 +36,11 @@ export default function App() {
   }
 
   const copyReply = () => {
-    if (result?.reply) navigator.clipboard.writeText(result.reply)
+    if (result?.reply) {
+      navigator.clipboard.writeText(result.reply)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
   }
 
   const handleRegenerate = async () => {
@@ -129,9 +133,20 @@ export default function App() {
               <div className="flex gap-2 mt-3">
                 <button
                   onClick={copyReply}
+                  disabled={!result?.reply}
                   className="flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-slate-100 dark:hover:bg-slate-800 transition text-sm"
                 >
-                  <Copy className="w-4 h-4" /> Copiar
+                  {copied ? (
+                    <>
+                      <Check className="w-4 h-4" />
+                      Copiado
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-4 h-4" />
+                      Copiar
+                    </>
+                  )}
                 </button>
                 <button
                   onClick={handleRegenerate}
