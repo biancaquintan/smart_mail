@@ -9,7 +9,7 @@ from app.model import EmailClassifier
 logging.basicConfig(level=logging.INFO)
 
 DEFAULT_DATA_PATH = "data/sample_email.csv"
-DEFAULT_MODEL_PATH = "models/model.joblib"
+DEFAULT_MODEL_PATH = "/models/model.joblib"
 
 try:
   nltk.data.find("corpora/stopwords")

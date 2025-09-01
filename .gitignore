@@ -4,7 +4,6 @@ venv/
 __pycache__/
 .env
 .env.production
-models/
 .vscode/*
 !.vscode/settings.json
 dist/
@@ -14,3 +13,6 @@ yarn-debug.log*
 yarn-error.log*
 *.swp
 *.swo
+/models
+# Manter modelo que vai no backend
+!backend/models/model.joblib

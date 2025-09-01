@@ -15,10 +15,11 @@ RUN python -m nltk.downloader stopwords
 
 COPY . /app
 
+# copiar o modelo treinado (caso já exista no repositório)
+COPY backend/models/model.joblib /models/model.joblib
+
+ENV MODEL_PATH=/models/model.joblib
+
 EXPOSE 8000
 
-ENV PYTHONPATH=/app
-
-# comando de inicialização
 CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
-
