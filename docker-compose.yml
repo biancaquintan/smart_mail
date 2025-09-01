@@ -1,6 +1,8 @@
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     environment:
       - ENV=dev
       - OPENAI_API_KEY=${OPENAI_API_KEY}
@@ -15,18 +17,23 @@ services:
       - '8000:8000'
 
   trainer:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     working_dir: /app
     command: ['python', 'scripts/train.py']
     environment:
       - MODEL_PATH=/models/model.joblib
       - DATA_PATH=/app/data/sample_email.csv
+      - PYTHONPATH=/app
     volumes:
       - ./models:/models
       - ./backend/data:/app/data:ro
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     volumes:
       - ./frontend:/ui
       - /ui/node_modules

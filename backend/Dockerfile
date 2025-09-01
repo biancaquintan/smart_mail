@@ -16,7 +16,7 @@ RUN python -m nltk.downloader stopwords
 COPY . /app
 
 # copiar o modelo treinado (caso já exista no repositório)
-COPY backend/models/model.joblib /models/model.joblib
+COPY models/model.joblib /models/model.joblib
 
 ENV MODEL_PATH=/models/model.joblib
 
