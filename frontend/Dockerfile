@@ -1,13 +1,23 @@
-FROM node:20-alpine AS dev
-WORKDIR /frontend
+FROM node:20-alpine AS build
 
-COPY package.json package-lock.json* ./
+WORKDIR /app
+
+COPY package*.json ./
 RUN npm install
 
-RUN npm install tailwindcss@3.4 postcss autoprefixer --save-dev && npm install
-
 COPY . .
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+RUN npm run build
 
-EXPOSE 5173
+FROM node:20-alpine AS runtime
 
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+WORKDIR /app
+
+RUN npm install -g serve
+
+COPY --from=build /app/dist ./dist
+
+EXPOSE 80
+
+CMD ["serve", "-s", "dist", "-l", "80"]
