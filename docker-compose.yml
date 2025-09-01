@@ -9,6 +9,7 @@ services:
       - MODEL_PATH=/models/model.joblib
       - DATA_PATH=/app/data/sample_email.csv
       - ALLOW_ORIGINS=*
+      - PYTHONPATH=/app
     working_dir: /app
     volumes:
       - ./models:/models
@@ -34,10 +35,12 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        VITE_API_URL: 'http://localhost:8000/api'
     volumes:
       - ./frontend:/ui
       - /ui/node_modules
     ports:
-      - '5173:5173'
+      - '3000:80'
     depends_on:
       - backend
